@@ -9,7 +9,7 @@ public class JdbcTest {
 	   static final String DB_URL = "jdbc:mysql://localhost/nishat";
 	   static final String USER = "root";
 	   static final String PASS = "Nishat1234";
-	   static final String QUERY = "SELECT employeeid FROM Employeed where employeename in ('anvi','nishat')";
+	   static final String QUERY = "SELECT employeeid FROM Employeed where employeename in ('anvi')";
 
 	public static void main(String[] args) throws SQLException {
 		// TODO Auto-generated method stub
@@ -23,6 +23,7 @@ public class JdbcTest {
 				System.out.println("Employee Id is " + rs.getInt("employeeid"));
 			}
 			conn.close();
+ 		  System.out.println("Program Finished");
 		}
 		catch(SQLException ex) {
 			System.out.println("Exception Occured " + ex);	
